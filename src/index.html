@@ -4,10 +4,48 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./styles/styles.css" />
         <title>Portfolio - Catarina</title>
     </head>
-    <body>
+    <body class="body-dark">
+        <nav class="navbar">
+            <ul>
+                <li><a class="nav-link nav-link-active" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">Portfolio</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <main class="intro">
+            <img
+                class="intro-photo"
+                src="./images/photo-home.png"
+                alt="Catarina's profile picture"
+            />
+
+            <div class="intro-text-elements">
+                <h1 class="intro-title">
+                    <span class="title-cursive">hello, my name is</span>
+                    <span class="title-serif">Catarina</span>
+                </h1>
+                <p class="intro-body">
+                    I’m a <strong>junior front-end web developer</strong> with a
+                    marketing background, UX/UI training and a passion for all
+                    things design. Currently based in Lisbon, PT.
+                </p>
+                <div class="intro-buttons">
+                    <a class="btn btn-main-light" href="#">See my work</a>
+                    <a class="btn btn-secondary-light" href="#">Contact me</a>
+                </div>
+            </div>
+        </main>
+
         <script src="index.js"></script>
     </body>
 </html>
