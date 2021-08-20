@@ -20,12 +20,16 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 0 1.5em;
-    margin: 0 auto;
+    margin: 1em auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.section {
+    margin-bottom: 3em;
 }
 
 a {
@@ -66,6 +70,7 @@ a {
     padding: 0.75em 1.75em;
     position: relative;
     display: block;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 600px) {
@@ -87,6 +92,18 @@ a {
     border: 1px solid #f8edeb;
 }
 
+.btn-main-dark {
+    color: #f8edeb;
+    background-color: #c29a9a;
+    border: 1px solid #c29a9a;
+}
+
+.btn-secondary-dark {
+    color: #c29a9a;
+    background-color: #f4e4e1;
+    border: 1px solid #c29a9a;
+}
+
 .btn-main-light::after,
 .btn-secondary-light::after {
     content: '';
@@ -95,7 +112,7 @@ a {
     position: absolute;
     top: 0.42em;
     left: 0.42em;
-    z-index: -2;
+    z-index: -1;
 }
 
 .btn-main-light::after {
@@ -104,6 +121,10 @@ a {
 
 .btn-secondary-light::after {
     border: 1px solid #f1d4d4;
+}
+
+.btn-main-dark::after {
+    background-color: #d4b4b4;
 }
 
 .title-cursive,
@@ -125,7 +146,7 @@ a {
 
 .section-title {
     text-align: center;
-    margin: 1em 0 2em;
+    margin: 3em 1em 2.5em;
 }
 
 .section .title-cursive {
@@ -138,9 +159,9 @@ a {
     margin-top: -0.5em;
 }
 
-/* ------------------------------------------------------------- 
------------------------------ HOME -----------------------------
----------------------------------------------------------------- */
+/* ------------------------------------------------------------------ 
+-------------------------------- HOME -------------------------------
+--------------------------------------------------------------------- */
 
 .intro {
     text-align: center;
@@ -253,9 +274,9 @@ strong::after {
     }
 }
 
-/* -------------------------------------------------------------- 
------------------------------ ABOUT -----------------------------
------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ 
+------------------------------- ABOUT -------------------------------
+--------------------------------------------------------------------- */
 
 .section-about-photo {
     background-image: url(../images/photo-about.png);
@@ -341,4 +362,102 @@ strong::after {
         height: 130px;
         margin: 0 1em;
     }
+}
+
+/* ------------------------------------------------------------------ 
+----------------------------- PORTFOLIO -----------------------------
+--------------------------------------------------------------------- */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5em;
+}
+
+.window-buttons {
+    background-color: #c29a9a;
+    min-height: 15px;
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.window-btn {
+    background-color: #f1d4d4;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin-left: 0.25em;
+}
+
+.project-image {
+    border: 1px solid #c29a9a;
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    background-color: #f4e4e1;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 45%;
+}
+
+.card-content {
+    margin: 0 1.5em;
+    flex-shrink: 2;
+}
+
+.card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2a3853;
+    margin-top: 1.5em;
+}
+
+.card-body {
+    line-height: 1.8;
+    margin: 1.5em 0;
+}
+
+.card-buttons {
+    text-align: center;
+    background-color: lightcyan;
+    width: min-content;
+    height: 41px;
+    margin: 0.5em 0 2em;
+    position: relative;
+    z-index: 3;
+}
+
+.btn-shadow {
+    background-color: #d4b4b4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0.42em;
+    left: 0.42em;
+    z-index: -1;
+}
+
+@media screen and (min-width: 750px) {
+    .card {
+        flex-direction: row;
+    }
+
+    /* .card-image {
+        flex-shrink: 3;
+    }
+
+    .card-content {
+        flex-shrink: 1;
+    } */
 }
