@@ -239,10 +239,13 @@ strong::after {
     .intro {
         text-align: left;
         max-width: 1200px;
-        margin: 5em auto;
+        min-height: calc(80vh - 69px);
+        padding: 3em 0;
+        margin: 0 auto;
         display: grid;
         column-gap: 0.5em;
         grid-template-areas: 'text photo';
+        align-items: center;
     }
 
     .intro-photo {
@@ -251,10 +254,8 @@ strong::after {
     }
 
     .intro-text-elements {
-        margin-top: 3em;
         grid-area: text;
         justify-self: end;
-        align-self: center;
     }
 
     .intro-title .title-cursive {
