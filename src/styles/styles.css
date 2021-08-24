@@ -178,7 +178,7 @@ a {
 
 .intro-photo {
     width: 100%;
-    max-width: 580px;
+    max-width: 70vh;
     height: auto;
     padding: 2em;
     margin: 0 auto;
